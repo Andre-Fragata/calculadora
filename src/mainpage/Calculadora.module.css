@@ -1,0 +1,54 @@
+.estilo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  background: #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+}
+
+button:hover {
+  background: #bbb;
+}
+
+#clear {
+  background: #f00;
+  color: #fff;
+}
+
+#equal {
+  background: #0f0;
+  color: #fff;
+}
