@@ -32,8 +32,8 @@ function Calculadora() {
   };
 
   return (
-    <div className={Calculator.estilo}>
-      <div className={Calculator.main}>
+    <section className={Calculator.estilo}>
+      <main className={Calculator.main}>
       <h1 className={Calculadora.text}>Calculadora</h1>
         <input className={Calculadora.tela} type="text" value={result} />
         <div className={Calculator.keypad}>
@@ -89,8 +89,8 @@ function Calculadora() {
             Clear
           </button>
         </div>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 }
 
