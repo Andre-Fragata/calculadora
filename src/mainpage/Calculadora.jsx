@@ -3,17 +3,28 @@ import Calculator from './Calculadora.module.css'
 
 function Calculadora() {
   const [result, setResult] = useState("");
+  const [lastStep, setLastStep] = useState("start") //Utilizado para identificar se o ultimo passo foi o resultado, para que possamos limpar o input para o proximo calculo
 
   const handleClick = (e) => {
-    setResult(result.concat(e.target.name));
+    if(lastStep == "end"){
+      setLastStep("start");
+      setResult(e.target.name)
+    }else{
+      setResult(result.concat(e.target.name));
+    }
   };
 
   const calculate = () => {
     try {
-      setResult(eval(result).toString());
+      if(eval(result).toString() == "Infinity"){
+        setResult("Não é possível dividir por zero")
+      }else{
+        setResult(eval(result).toString());
+      }
     } catch (err) {
       setResult("Error");
     }
+    setLastStep("end")
   };
 
   const clear = () => {
