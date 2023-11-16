@@ -38,7 +38,7 @@ function Calculadora() {
         <input className={Calculadora.tela} type="text" value={result} />
         <div className={Calculator.keypad}>
           <button name="7" onClick={handleClick}>
-            7
+            8
           </button>
           <button name="8" onClick={handleClick}>
             8
